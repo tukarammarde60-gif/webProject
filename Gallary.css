@@ -258,8 +258,7 @@ body {
     margin: 15px;
   }
 }
-/*Mobile View  */
-  /* ===== Mobile Responsive Adjustments ===== */
+/* ===== Mobile Responsive Adjustments ===== */
 @media (max-width: 1024px) {
   /* Hero Text */
   .hero-text h2 {
@@ -374,6 +373,3 @@ body {
 }
 
 }
-
-
-

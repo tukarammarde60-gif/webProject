@@ -15,7 +15,7 @@ menubar.addEventListener('click', () => {
 });
 
 // ===== Booking Form Submission =====
-const url = 'https://script.google.com/macros/s/AKfycbyVbIrszmhIkK-sMnH1oX8vZWArffigKhrYp8AWhk1X6dlnmyDgcBBzWM-yQwpilt61Gw/exec'; // Your Apps Script URL
+const url = 'https://script.google.com/macros/s/AKfycbzTGUEIfXocjnET13ROWsTq5fKs2P8h3-sK-uv-CPp0CXsVHEeW4IGD549yzphvvLuw/exec'; // Your Apps Script URL
 const bookingForm = document.querySelector('#bookingForm');
 const submitButton = bookingForm.querySelector('button[type="submit"]');
 
@@ -57,5 +57,6 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         alert("Please enter a valid 10-digit phone number.");
     }
 });
+
 
 

@@ -34,8 +34,7 @@ body {
 }
 
 .header img {
-  width: 130px;
-  transition: transform 0.3s ease;
+  width: 120px;
 }
 
 .header img:hover {
@@ -816,6 +815,7 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
 }
+
 
 
 

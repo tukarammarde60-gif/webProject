@@ -47,7 +47,7 @@
         <div class="contactus">
             <form id="bookingForm" class="horizontal-form">
                 <input type="text" name="name" placeholder="Full Name" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number">
                 <input type="text" name="pickup_location" placeholder="Pickup Location" required>
                 <input type="text" name="dropoff_location" placeholder="Dropoff Location" required>
                 <input type="text" name="booking_date" id="dateInput" placeholder="DD/MM/YYYY" 
@@ -199,6 +199,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

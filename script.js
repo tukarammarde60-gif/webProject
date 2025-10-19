@@ -49,3 +49,13 @@ bookingForm.addEventListener('submit', async (e) => {
     
 });
 
+// Mobile Number Validation
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    const phone = document.getElementById("phone").value.trim();
+    if (!/^\d{10}$/.test(phone)) {
+        e.preventDefault(); // stop form submission
+        alert("Please enter a valid 10-digit phone number.");
+    }
+});
+
+

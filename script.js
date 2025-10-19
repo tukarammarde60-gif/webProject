@@ -44,7 +44,8 @@ bookingForm.addEventListener('submit', async (e) => {
         console.error(err);
     } finally {
         submitButton.disabled = false;
-        submitButton.innerText = 'Book Now';
+        submitButton.innerText = 'Submit';
     }
     
 });
+

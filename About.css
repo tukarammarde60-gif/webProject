@@ -349,5 +349,38 @@ body {
     font-size: 1.6rem;
   }
 }
+/* Mobile Responsive - Center Why Choose Us Section */
+@media (max-width: 600px) {
+  /* Center the heading */
+  .about-card h3 {
+    text-align: center;
+    font-size: 1.8rem; /* slightly smaller on mobile */
+  }
+
+  /* Center the list */
+  .why-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center items horizontally */
+    padding-left: 0;
+    gap: 12px;
+  }
+
+  .why-us li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center icon + text together */
+    font-size: 1.3rem;
+    gap: 8px;
+    width: auto;
+    opacity: 1 !important;      /* ensure visible */
+    transform: none !important; /* disable animation transform */
+  }
+
+  .why-us li i {
+    font-size: 1.5rem;
+  }
+}
 
 }
+

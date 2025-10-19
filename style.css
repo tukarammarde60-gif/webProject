@@ -782,4 +782,34 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
 
     
 }
+/* ===== Services Section ===== */
+.services-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.services-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FAQ Section ===== */
+.faq-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.faq-item {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 

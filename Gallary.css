@@ -371,5 +371,112 @@ body {
     font-size: 1.6rem;
   }
 }
+/* Mobile View Gallery Adjustments: 3 images per row, fully visible */
+@media (max-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+        gap: 5px; /* space between images */
+        padding: 5px;
+    }
+
+    .gallery-item img {
+        width: 100%;     /* fit the grid cell */
+        height: auto;    /* maintain aspect ratio */
+        object-fit: contain; /* no cropping */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+}
+/* Mobile Lightbox */
+@media (max-width: 768px) {
+    .lightbox {
+        display: none; /* hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 95%;
+        border-radius: 10px;
+    }
+
+    .lightbox .close,
+    .lightbox .prev,
+    .lightbox .next {
+        position: absolute;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px;
+        background: rgba(0,0,0,0.3);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .lightbox .close:hover,
+    .lightbox .prev:hover,
+    .lightbox .next:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    .lightbox .close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .lightbox .prev {
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    .lightbox .next {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    /* Hide caption */
+    .lightbox .caption {
+        display: none;
+    }
+}
+/* Mobile lightbox button adjustments */
+@media (max-width: 768px) {
+    .lightbox .prev,
+    .lightbox .next,
+    .lightbox .close {
+        font-size: 1.5rem;        /* smaller buttons for mobile */
+        padding: 6px 8px;         /* smaller padding */
+    }
+
+    .lightbox .prev {
+        left: 5px;                /* closer to edge */
+    }
+
+    .lightbox .next {
+        right: 5px;               /* closer to edge */
+    }
+
+    .lightbox .close {
+        top: 5px;
+        right: 5px;
+    }
+}
 
 }

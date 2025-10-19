@@ -811,5 +811,11 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.header {
+  padding: 5px 20px;   /* smaller top/bottom padding reduces header box */
+  /* or you can use: min-height */
+  min-height: 50px;    /* sets the minimum height of the header */
+}
+
 
 

@@ -101,6 +101,7 @@ body {
   box-shadow: 0 0 30px rgba(255, 110, 196, 0.5), 0 0 60px rgba(0, 255, 234, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .gallery-item img {
   width: 100%;
   height: auto;
@@ -108,9 +109,11 @@ body {
   transition: transform 0.5s ease;
   border-radius: 20px;
 }
+
 .gallery-item:hover img {
   transform: scale(1.1);
 }
+
 .gallery-item::after {
   content: attr(data-title);
   position: absolute;
@@ -477,4 +480,3 @@ body {
 }
 
 }
-

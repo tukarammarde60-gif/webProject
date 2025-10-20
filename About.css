@@ -24,7 +24,6 @@ body {
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: white;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -421,6 +420,7 @@ body {
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
 }
+
 
 
 

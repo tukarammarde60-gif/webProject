@@ -12,6 +12,7 @@ html {
   font-size: 80.5%;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 /* ===== Body & Background ===== */
@@ -420,3 +421,4 @@ body {
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
 }
+

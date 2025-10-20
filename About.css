@@ -421,15 +421,7 @@ body {
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
 }
-html {
-    scrollbar-gutter: stable;
-    overflow-y: auto;
-}
 
-body {
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin: 0;
-}
+
 
 

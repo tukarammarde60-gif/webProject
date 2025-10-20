@@ -11,6 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 /* ===== Body & Background ===== */
+/* ===== Body & Background ===== */
 body {
   min-height: 100vh;
   display: flex;
@@ -20,7 +21,9 @@ body {
   animation: gradientBG 15s ease infinite;
   color: white;
   overflow-x: hidden;
+  line-height: 1.6;
 }
+
 
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
@@ -34,33 +37,46 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid #ff6ec4;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
 }
 
 .header img {
   width: 120px;
 }
-
+.header img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
 .navbar a {
-  margin-left: 20px;
+  margin-left: 25px;
   font-size: 1.6rem;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
 }
 
+.navbar a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #ffc61a;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-radius: 5px;
+  transition: width 0.3s;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
 .navbar a:hover {
   color: #00ffea;
   background: rgba(255, 255, 255, 0.1);
 }
-
 #menu-bars {
   display: none;
   font-size: 2.4rem;
@@ -150,6 +166,7 @@ body {
 }
 
 /* ===== Responsive ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .navbar a {
     font-size: 1.4rem;
@@ -170,6 +187,7 @@ body {
   #menu-bars {
     display: block;
   }
+
 
   .navbar {
     position: absolute;
@@ -204,15 +222,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid #ff6ec4;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
 }
 
 .header img {
-  width: 120px; /* Same as About page */
+  width: 120px;
 }
 
 /* ===== Navbar Links (same size as About page) ===== */
@@ -252,8 +271,7 @@ body {
     border-radius: 8px;
     text-align: right;
   }
-
-  .navbar.active {
+.navbar.active {
     right: 0;
   }
 
@@ -261,6 +279,7 @@ body {
     display: block;
     margin: 15px;
   }
+
 }
 /* ===== Mobile Responsive Adjustments ===== */
 @media (max-width: 1024px) {
@@ -581,4 +600,17 @@ body {
 }
 
 
+
+.header { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:rgba(0,0,0,0.85); position:sticky; top:0; z-index:1000; box-shadow:0 2px 15px rgba(0,0,0,0.4); backdrop-filter:blur(8px);}
+.header img { width:130px; transition:transform 0.3s ease; }
+.header img:hover { transform:scale(1.1) rotate(-5deg); }
+}
+
+.navbar a { margin-left:25px; font-size:1.6rem; color:#fff; font-weight:600; position:relative; }
+.navbar a::after { content:''; height:3px; width:0; background:#ffc61a; position:absolute; left:0; bottom:-5px; border-radius:5px; transition:width 0.3s; }
+.navbar a:hover::after { width:100%; }
+.header {
+  padding: 5px 20px;   /* smaller top/bottom padding reduces header box */
+  /* or you can use: min-height */
+  min-height: 50px;    /* sets the minimum height of the header */
 }

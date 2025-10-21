@@ -130,3 +130,4 @@ lightbox.addEventListener('touchend', () => {
 });
 
 });
+

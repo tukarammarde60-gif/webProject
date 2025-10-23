@@ -56,8 +56,32 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         e.preventDefault(); // stop form submission
         alert("Please enter a valid 10-digit phone number.");
     }
+
+
+    // structured-data.js
+
+(function() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Tirupati Tours and Travels",
+        "image": "https://example.com/Logo.png",
+        "description": "Reliable taxi, car hire, and cab booking service in Latur. Comfortable rides, affordable prices, 24/7 availability.",
+        "telephone": "+919850876285",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Latur",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+        },
+        "areaServed": "Maharashtra",
+        "url": "https://example.com"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+})();
+
 });
-
-
-
-

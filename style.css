@@ -817,7 +817,169 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
   min-height: 50px;    /* sets the minimum height of the header */
 }
 
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+    .hero-text {
+        text-align: center;        /* Center text on mobile */
+        padding: 15px 10px;        /* Optional spacing */
+    }
 
+    /* Reduce font size for h1 and h2 */
+    .hero-text h1 {
+        font-size: 1.3rem;         /* Smaller heading */
+        line-height: 1.3;          /* Adjust spacing */
+    }
 
+    .hero-text h2 {
+        font-size: 1.3rem;         /* Smaller subheading */
+        line-height: 1.3;
+        margin-top: 10px;
+    }
 
+    /* Optional: reduce button size */
+    .hero-text .booknow {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
 
+    /* Mobile-specific adjustments for the booking form */
+@media screen and (max-width: 768px) {
+    /* Center the form and reduce width */
+    .booking-form {
+        width: 90%;          /* Make form narrower */
+        margin: 20px auto;   /* Center horizontally with some spacing */
+        padding: 15px;       /* Add inner padding */
+        box-sizing: border-box;
+    }
+
+    /* Inputs: smaller height and font */
+    .booking-form input[type="text"],
+    .booking-form input[type="tel"],
+    .booking-form input[type="date"] {
+        font-size: 0.9rem;   /* Smaller text */
+        padding: 8px 10px;   /* Less padding */
+        margin-bottom: 10px; /* Spacing between inputs */
+        width: 100%;         /* Full width of form container */
+    }
+
+    /* Button: smaller and fit container */
+    .booking-form button.booknow {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    /* Optional: reduce spacing between form fields */
+    .booking-form .contactus {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* Mobile adjustments for Home Section */
+@media screen and (max-width: 768px) {
+    .home-container .inner-content {
+        padding: 15px 10px;      /* Reduce padding */
+        text-align: center;       /* Center content on mobile */
+    }
+
+    /* Reduce heading sizes */
+    .home-container h2 {
+        font-size: 1.4rem;        /* Smaller heading */
+        line-height: 1.3;         /* Reduce spacing between lines */
+        margin-bottom: 8px;
+    }
+
+    /* Reduce paragraph font size and spacing */
+    .home-container p {
+        font-size: 0.95rem;       /* Smaller paragraph text */
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    /* Button: smaller and full width */
+    .home-container .booknow {
+        font-size: 0.95rem;
+        padding: 8px 15px;
+        width: 100%;
+    }
+}
+
+}
+
+@media screen and (max-width: 768px) {
+    /* Reduce header padding to make it shorter */
+    .header {
+        padding: 5px 10px;          /* Less top/bottom padding */
+        height: auto;                /* Let content determine height */
+    }
+
+    /* Make logo smaller but keep text readable */
+    .header #logo img {
+        width: 80px;                 /* Smaller logo width */
+        height: auto;
+    }
+
+    /* Navbar links: reduce spacing between them */
+    .header .navbar a {
+        padding: 5px 8px;            /* Less spacing between links */
+    }
+
+    /* Hamburger menu icon position and size */
+    #menu-bars {
+        font-size: 1.4rem;           /* Slightly smaller menu icon */
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-text {
+        margin-top: 0;           /* Remove default top margin */
+        padding-top: 0;          /* Remove top padding */
+        position: relative;
+        top: -100px;              /* Pull text up by 20px, adjust as needed */
+        text-align: center;      /* Keep text centered */
+    }
+
+    /* Optional: adjust spacing between headings */
+    .hero-text h1 {
+        margin-bottom: 5px;
+    }
+
+    .hero-text h2 {
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Move hero text up */
+    .hero-text {
+        margin-top: 0;        /* Remove top margin */
+        padding-top: 0;       /* Remove padding */
+        position: relative;
+        top: -20px;           /* Pull text upward, increase value if needed */
+        text-align: center;
+    }
+
+    /* Move booking form closer to hero text */
+    .booking-form {
+        margin-top: -15px;    /* Pull form upward */
+        padding: 10px 10px;   /* Optional: smaller padding */
+        width: 90%;           /* Fit mobile screen */
+        box-sizing: border-box;
+    }
+
+    /* Reduce spacing between input fields */
+    .booking-form input[type="text"],
+    .booking-form input[type="tel"],
+    .booking-form input[type="date"] {
+        margin-bottom: 8px;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
+    /* Adjust button size */
+    .booking-form button.booknow {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+        width: 100%;
+        margin-top: 5px;
+    }
+}

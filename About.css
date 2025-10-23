@@ -278,6 +278,29 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+    /* Reduce header padding to make it shorter */
+    .header {
+        padding: 5px 10px;          /* Less top/bottom padding */
+        height: auto;                /* Let content determine height */
+    }
+
+    /* Make logo smaller but keep text readable */
+    .header #logo img {
+        width: 80px;                 /* Smaller logo width */
+        height: auto;
+    }
+
+    /* Navbar links: reduce spacing between them */
+    .header .navbar a {
+        padding: 5px 8px;            /* Less spacing between links */
+    }
+
+    /* Hamburger menu icon position and size */
+    #menu-bars {
+        font-size: 1.4rem;           /* Slightly smaller menu icon */
+    }
+}
 @media (max-width: 768px) {
   /* Header Navbar */
   #menu-bars {
@@ -408,13 +431,12 @@ body {
 }
 
 .header { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:rgba(0,0,0,0.85); position:sticky; top:0; z-index:1000; box-shadow:0 2px 15px rgba(0,0,0,0.4); backdrop-filter:blur(8px);}
-.header img { width:130px; transition:transform 0.3s ease; }
 .header img:hover { transform:scale(1.1) rotate(-5deg); }
 .navbar a { margin-left:25px; font-size:1.6rem; color:#fff; font-weight:600; position:relative; }
 .navbar a::after { content:''; height:3px; width:0; background:#ffc61a; position:absolute; left:0; bottom:-5px; border-radius:5px; transition:width 0.3s; }
 .navbar a:hover::after { width:100%; }
 .header {
-  padding: 0.01px 20px;   /* smaller top/bottom padding reduces header box */
+  padding: 5px 20px;   /* smaller top/bottom padding reduces header box */
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
 }

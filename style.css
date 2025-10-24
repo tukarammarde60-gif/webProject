@@ -19,7 +19,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* ===== Header ===== */
 .header {
   display: flex;
@@ -1108,4 +1110,5 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
     border-radius: 8px;
   }
 }
+
 

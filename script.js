@@ -8,7 +8,7 @@ menubar.addEventListener('click', () => {
 });
 
 // ===== Booking Form Submission =====
-const url = 'https://script.google.com/macros/s/AKfycbwUXo8-SdQU1VazcaPC7K8IDWgfGHUvRtqB13n590EbZr4-C02tnWzJE6A77N53BVHr/exec';
+const url = 'https://script.google.com/macros/s/AKfycbxgR4MNQNIuiMD0Ex1w1ASjPTCPzHqJw0oL1eoEaYm_fI4sIP4dLBeQoFmnWQWtJbB0Ew/exec';
 const bookingForm = document.querySelector('#bookingForm');
 const submitButton = bookingForm.querySelector('button[type="submit"]');
 
@@ -90,3 +90,4 @@ bookingForm.addEventListener('submit', async (e) => {
     script.text = JSON.stringify(jsonLd);
     document.head.appendChild(script);
 })();
+

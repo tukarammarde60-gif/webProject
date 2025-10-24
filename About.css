@@ -24,7 +24,9 @@ body {
   color: white;
   line-height: 1.6;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
@@ -411,4 +413,5 @@ body {
         scroll-behavior: smooth;
     }
 }
+
 

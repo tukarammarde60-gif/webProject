@@ -983,3 +983,42 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
         margin-top: 5px;
     }
 }
+/* ===== Success Popup (Top Position) ===== */
+.success-popup {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: #4CAF50;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+/* Show animation */
+.success-popup.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Optional — red color for error messages */
+.success-popup.error {
+  background: #f44336;
+}
+
+/* ===== Responsive (Mobile Only) ===== */
+@media (max-width: 600px) {
+  .success-popup {
+    top: 20px;              /* slightly higher for small screens */
+    padding: 8px 15px;      /* smaller padding */
+    font-size: 13px;        /* smaller text */
+    border-radius: 8px;     /* smoother corners */
+    max-width: 85%;         /* fit within mobile width */
+  }
+}

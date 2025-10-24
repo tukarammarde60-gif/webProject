@@ -22,6 +22,10 @@ body {
 html, body {
   overflow-x: hidden;
 }
+html, body {
+  overscroll-behavior: none;
+}
+
 /* ===== Header ===== */
 .header {
   display: flex;
@@ -1110,5 +1114,6 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
     border-radius: 8px;
   }
 }
+
 
 

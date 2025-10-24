@@ -27,6 +27,10 @@ body {
 html, body {
   overflow-x: hidden;
 }
+html, body {
+  overscroll-behavior: none;
+}
+
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
@@ -413,5 +417,6 @@ html, body {
         scroll-behavior: smooth;
     }
 }
+
 
 

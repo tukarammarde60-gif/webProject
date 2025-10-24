@@ -72,9 +72,7 @@ body {
 .navbar a:hover::after {
   width: 100%;
 }
-.navbar a:hover {
-  color: #00ffea;
-}
+
 
 #menu-bars {
   display: none;
@@ -190,26 +188,6 @@ body {
     display: block;
   }
 
-  .navbar {
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    width: 200px;
-    border-radius: 8px;
-    text-align: right;
-  }
-
-  .navbar.active {
-    right: 0;
-  }
-
-  .navbar a {
-    display: block;
-    margin: 15px;
-  }
-
   /* ===== Why Choose Us Icons ===== */
 .why-us {
     list-style: none;
@@ -259,24 +237,7 @@ body {
 .why-us li:hover {
     transform: translateX(5px);
 }
-/* ===== Mobile Responsive Adjustments ===== */
-@media (max-width: 1024px) {
-  /* Hero Text */
-  .hero-text h2 {
-    font-size: 2.6rem; /* Slightly smaller on tablets */
-  }
 
-  /* Hero Booking Form */
-  .hero-booking .contactus {
-    width: 85%;
-    padding: 25px;
-  }
-
-  /* Navbar Links */
-  .navbar a {
-    font-size: 1.6rem;
-  }
-}
 
 @media screen and (max-width: 768px) {
     /* Reduce header padding to make it shorter */
@@ -291,64 +252,10 @@ body {
         height: auto;
     }
 
-    /* Navbar links: reduce spacing between them */
-    .header .navbar a {
-        padding: 5px 8px;            /* Less spacing between links */
-    }
-
     /* Hamburger menu icon position and size */
     #menu-bars {
         font-size: 1.4rem;           /* Slightly smaller menu icon */
     }
-}
-@media (max-width: 768px) {
-  /* Header Navbar */
-  #menu-bars {
-    display: block;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background: #ffc61a;
-    flex-direction: column;
-    display: none;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .navbar a {
-    width: 100%;
-    font-size: 1.8rem;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  /* Hero Text & Booking Form */
-  .hero-text h2 {
-    font-size: 2.2rem;
-  }
-
-  .hero-booking .contactus {
-    width: 95%;
-    padding: 20px;
-  }
-
-  /* Hero Icons */
-  .hero-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .hero-icon:nth-child(1) { left: -80px; }
-  .hero-icon:nth-child(2) { left: -100px; }
-  .hero-icon:nth-child(3) { left: -120px; }
 }
 
 @media (max-width: 480px) {
@@ -363,37 +270,12 @@ body {
     padding: 15px;
   }
 
-  .booking-form .contactus {
-    padding: 15px;
-  }
-
-  /* Gallery */
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-    margin: 30px 10px;
-  }
-
-  .gallery-item img {
-    height: 140px;
-  }
-
   /* Fast Booking Steps */
   .booking-steps {
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Testimonials */
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  /* Navbar Links */
-  .navbar a {
-    font-size: 1.6rem;
-  }
 }
 /* Mobile Responsive - Center Why Choose Us Section */
 @media (max-width: 600px) {
@@ -439,4 +321,93 @@ body {
   padding: 5px 20px;   /* smaller top/bottom padding reduces header box */
   /* or you can use: min-height */
   min-height: 50px;    /* sets the minimum height of the header */
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Reduce header padding to make it shorter */
+    .header {
+        padding: 5px 10px;          /* Less top/bottom padding */
+        height: auto;                /* Let content determine height */
+    }
+
+    /* Make logo smaller but keep text readable */
+    .header #logo img {
+        width: 80px;                 /* Smaller logo width */
+        height: auto;
+    }
+
+    /* Navbar links: reduce spacing between them */
+    .header .navbar a {
+        padding: 5px 8px;            /* Less spacing between links */
+    }
+
+    /* Hamburger menu icon position and size */
+    #menu-bars {
+        font-size: 1.4rem;           /* Slightly smaller menu icon */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text {
+        margin-top: 0;           /* Remove default top margin */
+        padding-top: 0;          /* Remove top padding */
+        position: relative;
+        top: -100px;              /* Pull text up by 20px, adjust as needed */
+        text-align: center;      /* Keep text centered */
+    }
+
+    /* Optional: adjust spacing between headings */
+    .hero-text h1 {
+        margin-bottom: 5px;
+    }
+
+    .hero-text h2 {
+        margin-top: 5px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Move hero text up */
+    .hero-text {
+        margin-top: 0;        /* Remove top margin */
+        padding-top: 0;       /* Remove padding */
+        position: relative;
+        top: -20px;           /* Pull text upward, increase value if needed */
+        text-align: center;
+    }
+
+    /* Move booking form closer to hero text */
+    .booking-form {
+        margin-top: -15px;    /* Pull form upward */
+        padding: 10px 10px;   /* Optional: smaller padding */
+        width: 90%;           /* Fit mobile screen */
+        box-sizing: border-box;
+    }
+
+    /* Reduce spacing between input fields */
+    .booking-form input[type="text"],
+    .booking-form input[type="tel"],
+    .booking-form input[type="date"] {
+        margin-bottom: 8px;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
+    /* Adjust button size */
+    .booking-form button.booknow {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+    }
 }

@@ -29,6 +29,10 @@ body {
 html, body {
   overflow-x: hidden;
 }
+html, body {
+  overscroll-behavior: none;
+}
+
 /* Animated Neon Gradient */
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
@@ -320,4 +324,5 @@ html, body {
         scroll-behavior: smooth;
     }
 }
+
 

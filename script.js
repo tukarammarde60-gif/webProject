@@ -3,24 +3,42 @@ const menubar = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
 
 menubar.addEventListener('click', () => {
-    menubar.classList.toggle('fa-times'); // change icon
-    navbar.classList.toggle('active');   // show/hide menu
-});
-
-
-
-menubar.addEventListener('click', () => {
-    menubar.classList.toggle('fa-times'); // change icon
-    navbar.classList.toggle('active');   // show/hide menu
+    menubar.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
 });
 
 // ===== Booking Form Submission =====
-const url = 'https://script.google.com/macros/s/AKfycbwUXo8-SdQU1VazcaPC7K8IDWgfGHUvRtqB13n590EbZr4-C02tnWzJE6A77N53BVHr/exec'; // Your Apps Script URL
+const url = 'https://script.google.com/macros/s/AKfycbwUXo8-SdQU1VazcaPC7K8IDWgfGHUvRtqB13n590EbZr4-C02tnWzJE6A77N53BVHr/exec';
 const bookingForm = document.querySelector('#bookingForm');
 const submitButton = bookingForm.querySelector('button[type="submit"]');
 
+// === Create Success Popup ===
+function showSuccessPopup(message) {
+    const popup = document.createElement('div');
+    popup.className = 'success-popup';
+    popup.textContent = message;
+    document.body.appendChild(popup);
+
+    // Show popup with animation
+    setTimeout(() => popup.classList.add('show'), 100);
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+        popup.classList.remove('show');
+        setTimeout(() => popup.remove(), 500);
+    }, 4000);
+}
+
 bookingForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // Validate phone number
+    const phone = document.getElementById("phone").value.trim();
+    if (!/^\d{10}$/.test(phone)) {
+        showSuccessPopup("❌ Please enter a valid 10-digit phone number.");
+        return;
+    }
+
     submitButton.disabled = true;
     submitButton.innerText = 'Booking...';
 
@@ -33,40 +51,29 @@ bookingForm.addEventListener('submit', async (e) => {
         });
 
         if (response.ok) {
-            alert('Booking submitted successfully!');
+            showSuccessPopup("✅ Booking successful! We’ll contact you shortly.");
             bookingForm.reset();
         } else {
-            alert('Error submitting form. Please try again.');
+            showSuccessPopup("⚠️ Something went wrong. Please try again.");
             console.error('Server response:', response.statusText);
         }
     } catch (err) {
-        alert('Error submitting form. Please try again.');
+        showSuccessPopup("⚠️ Network error. Please try again later.");
         console.error(err);
     } finally {
         submitButton.disabled = false;
         submitButton.innerText = 'Submit';
     }
-    
 });
 
-// Mobile Number Validation
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    const phone = document.getElementById("phone").value.trim();
-    if (!/^\d{10}$/.test(phone)) {
-        e.preventDefault(); // stop form submission
-        alert("Please enter a valid 10-digit phone number.");
-    }
-
-
-    // structured-data.js
-
+// ===== Structured Data (SEO Schema) =====
 (function() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "TaxiService",
         "name": "Tirupati Tours and Travels",
-        "image": "https://example.com/Logo.png",
-        "description": "Reliable taxi, car hire, and cab booking service in Latur. Comfortable rides, affordable prices, 24/7 availability.",
+        "image": "https://www.tirupatirides.in/Logo.png",
+        "description": "Reliable taxi, car hire, and cab booking service in Latur. Comfortable rides, affordable prices, and 24/7 availability.",
         "telephone": "+919850876285",
         "address": {
             "@type": "PostalAddress",
@@ -75,7 +82,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
             "addressCountry": "IN"
         },
         "areaServed": "Maharashtra",
-        "url": "https://example.com"
+        "url": "https://www.tirupatirides.in"
     };
 
     const script = document.createElement('script');
@@ -83,5 +90,3 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     script.text = JSON.stringify(jsonLd);
     document.head.appendChild(script);
 })();
-
-});

@@ -272,6 +272,8 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(25,118,210,0.3);
   transition: transform 0.4s, box-shadow 0.4s;
+  height: 100%;
+  min-height: 480px;
 }
 
 .inner-box:hover {
@@ -1022,3 +1024,4 @@ body { background:#f0f2f5; color:#333; line-height:1.6; }
     max-width: 85%;         /* fit within mobile width */
   }
 }
+

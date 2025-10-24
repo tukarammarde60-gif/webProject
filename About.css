@@ -197,7 +197,7 @@ body {
 
 .why-us li {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 1px 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -411,3 +411,4 @@ body {
         scroll-behavior: smooth;
     }
 }
+
